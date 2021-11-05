@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+JP:wght@500;700&display=swap'); //projectによって変更
+
+html {
+  background: #fff;
+  font-size: 62.5%;
+  @include sp {
+    font-size: calc(100vw / 37.5); //projectによって変更
+  }
+}
+
+body { //projectによって変更
+  position: relative;
+  color: $color-text-main;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2;
+  letter-spacing: 0.64px;
+  font-family: $font-default;
+  @media screen and (max-width: 950px) {
+    &.-is-open {
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+}
+
+.only-pc {
+  display: block;
+  @include sp {
+    display: none !important;
+  }
+}
+
+.only-sp {
+  display: none;
+  @include sp {
+    display: block !important;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: $font-default;
+}
+
+a {
+  color: $color-text-link;
+  text-decoration: none;
+  transition: .3s;
+  &:hover {
+    opacity: .8;
+    transition: .3s;
+    @include sp {
+      opacity: 1;
+    }
+  }
+}

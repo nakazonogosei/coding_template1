@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "ejs",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true,
+    "node": true
+  },
+  "globals": {},
+  "rules": {
+    "no-console": "off",
+    "no-extra-semi": "warn",
+    "no-global-assign": "error",
+    "no-undef": "warn",
+    "space-before-blocks": [
+      "warn", {
+        "keywords": "always",
+        "functions": "always",
+        "classes": "always"
+      }
+    ],
+    "prettier/prettier": "error"
+  }
+}
